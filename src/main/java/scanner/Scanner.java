@@ -79,6 +79,18 @@ public class Scanner {
                     nextChar = (char)inputFile.read();
 
                     return new Token(token.toString(), TokenType.QUOTATION);
+                case '\'':
+                    nextChar = (char)inputFile.read();
+
+                    while(nextChar != '\'') {
+                        token.append(nextChar);
+                        nextChar = (char)inputFile.read();
+                    }
+
+                    token.append(nextChar);
+                    nextChar = (char)inputFile.read();
+
+                    return new Token(token.toString(), TokenType.QUOTATION);
                 default:
                     nextChar = (char)inputFile.read();
                     return new Token(token.toString(), TokenType.SYMBOL);
@@ -114,7 +126,9 @@ public class Scanner {
             return new Token(token.toString(), TokenType.STRING);
         }
 
-        return new Token("Unknown", TokenType.ERROR);
+        token.append(nextChar);
+        nextChar = (char)inputFile.read();
+        return new Token(token.toString(), TokenType.ERROR);
     }
 
     public List<Token> getAllTokens() {

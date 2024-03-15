@@ -1,4 +1,8 @@
 package main;
+
+import lombok.Getter;
+
+@Getter //@ is forbidden
 public class QuickSort {
     //comment
     String quotation = "Hello";

@@ -25,7 +25,8 @@ public enum Symbol {
     HALF_AND("&"),
 	OR("||"),
     HALF_OR("|"),
-    DOT(".");
+    DOT("."),
+    QUOTATION("\"");
     private final String token;
 
     Symbol(String symbol) {

@@ -37,8 +37,10 @@ public class Scanner {
             switch(nextChar) {
                 case '!', '=', '>', '<':
                     nextChar = (char)inputFile.read();
-                    if(nextChar == '=')
+                    if(nextChar == '=') {
                         token.append(nextChar);
+                        nextChar = (char)inputFile.read();
+                    }
                     return new Token(token.toString(), TokenType.SYMBOL);
                 case '|':
                     nextChar = (char)inputFile.read();
@@ -65,17 +67,18 @@ public class Scanner {
                         nextChar = (char)inputFile.read();
                         return new Token(token.toString(), TokenType.SYMBOL);
                     }
-                case '\"':
+                case '"':
                     nextChar = (char)inputFile.read();
 
-                    while(nextChar != '\"') {
+                    while(nextChar != '"') {
                         token.append(nextChar);
                         nextChar = (char)inputFile.read();
                     }
 
                     token.append(nextChar);
                     nextChar = (char)inputFile.read();
-                    return new Token(token.toString(), TokenType.COMMENT);
+
+                    return new Token(token.toString(), TokenType.QUOTATION);
                 default:
                     nextChar = (char)inputFile.read();
                     return new Token(token.toString(), TokenType.SYMBOL);

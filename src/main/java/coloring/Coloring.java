@@ -28,9 +28,9 @@ public class Coloring {
 
     private void makeColoringMap() {
         coloringMap.put(TokenType.RESERVED, ANSI_CYAN);
-        coloringMap.put(TokenType.BUILT_IN_TYPES, ANSI_GREEN);
+        coloringMap.put(TokenType.BUILT_IN_TYPES, ANSI_YELLOW);
         coloringMap.put(TokenType.SYMBOL, ANSI_WHITE);
-        coloringMap.put(TokenType.STRING, ANSI_YELLOW);
+        coloringMap.put(TokenType.STRING, ANSI_GREEN);
         coloringMap.put(TokenType.NUMBER, ANSI_BLUE);
         coloringMap.put(TokenType.QUOTATION, ANSI_PURPLE);
         coloringMap.put(TokenType.COMMENT, ANSI_GREY);

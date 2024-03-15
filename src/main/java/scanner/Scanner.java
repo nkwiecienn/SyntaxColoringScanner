@@ -28,7 +28,7 @@ public class Scanner {
             token.append(nextChar);
             nextChar = (char)inputFile.read();
 
-            return new Token(Character.toString(nextChar), TokenType.WHITE_SPACE);
+            return new Token(token.toString(), TokenType.WHITE_SPACE);
         }
 
         if(Symbol.isSymbol(Character.toString(nextChar))) {
@@ -114,15 +114,15 @@ public class Scanner {
         return new Token("Unknown", TokenType.ERROR);
     }
 
-    public void scanAndPrintTokens() {
+    public List<Token> getAllTokens() {
         List<Token> tokens = new ArrayList<>();
-        Token token;
+        Token token_;
         boolean errorOccurred = false;
 
         try {
             // Skanowanie wszystkich tokenów
-            while ((token = nextToken()) != null) {
-                tokens.add(token);
+            while ((token_ = this.nextToken()).getType() != TokenType.EOF) {
+                tokens.add(token_);
             }
         } catch (IOException e) {
             errorOccurred = true;
@@ -131,9 +131,9 @@ public class Scanner {
 
         // Wyświetlanie tokenów, tylko jeśli nie wystąpił żaden błąd
         if (!errorOccurred) {
-            for (Token t : tokens) {
-                System.out.println(t.getType() + ": " + t.getToken());
-            }
+            return tokens;
         }
+
+        return null;
     }
 }

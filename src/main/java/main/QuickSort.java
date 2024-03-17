@@ -2,7 +2,7 @@ package main;
 
 import lombok.Getter;
 
-@Getter //@ is forbidden
+@Getter //@ is still forbidden
 public class QuickSort {
     //comment
     String quotation = "Hello";

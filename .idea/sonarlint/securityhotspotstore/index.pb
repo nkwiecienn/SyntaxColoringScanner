@@ -33,3 +33,7 @@ G.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,f\0\f0
 Q.idea/sonarlint/securityhotspotstore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,b\b\bbf202272a96de5cd6b6828ffdc55fb3ce45289c
 w
 G.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,a\e\ae9ddf453f55affea2d6b9e3973cac1eb2efb4e1
+9
+	file.html,f\7\f711423360847eb544056b9f883d0418327c617f
+H
+Output/Colored Code.html,8\7\87cb24b96dde6f0e594abb64cb72ad1f3d4c7ed0

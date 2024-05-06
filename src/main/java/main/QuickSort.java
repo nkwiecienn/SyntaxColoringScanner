@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter //@ is still forbidden
 public class QuickSort {
     //comment
-    String quotation = "Hello";
+    String quotation = "H\"\nello\"";
     public void quickSort(int[] arr, int begin, int end) {
         if (begin < end) {
             int partitionIndex = partition(arr, begin, end);

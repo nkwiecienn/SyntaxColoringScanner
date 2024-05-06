@@ -68,16 +68,16 @@ public class Scanner {
                         return new Token(token.toString(), TokenType.SYMBOL);
                     }
                 case '"':
-                    nextChar = (char)inputFile.read();
+                    nextChar = (char) inputFile.read();
+                    char prevChar = 0;
 
-                    while(nextChar != '"') {
+                    while (nextChar != '"' || prevChar == '\\') {
                         token.append(nextChar);
-                        nextChar = (char)inputFile.read();
+                        prevChar = nextChar;
+                        nextChar = (char) inputFile.read();
                     }
-
                     token.append(nextChar);
-                    nextChar = (char)inputFile.read();
-
+                    nextChar = (char) inputFile.read();
                     return new Token(token.toString(), TokenType.QUOTATION);
                 case '\'':
                     nextChar = (char)inputFile.read();

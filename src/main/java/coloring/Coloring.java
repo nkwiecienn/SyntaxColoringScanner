@@ -66,7 +66,7 @@ public class Coloring {
     public void printToHtml(String outputFile) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile))) {
             writer.write("<!DOCTYPE html><html><head><title>Colored Code</title>");
-            writer.write("<style>body { background-color: #000; color: #fff; } pre { white-space: pre-wrap; word-wrap: break-word; } span { color: inherit; }</style>");
+            writer.write("<style>body { background-color: #1E1F22; color: #fff; } pre { white-space: pre-wrap; word-wrap: break-word; } span { color: inherit; }</style>");
             writer.write("</head><body><pre>");
 
             for (Token t : tokens) {

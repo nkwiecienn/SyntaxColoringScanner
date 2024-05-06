@@ -1,10 +1,10 @@
 
-b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¨ù8¯ëƒ“ä1
-n	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã•éĞ8±ëƒ“ä1
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¨ù8Ú«­÷ô1
+n	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã•éĞ8Û«­÷ô1
 v
-java:S1450"TRemove the "token" field and declare it as a local variable in the relevant methods.(—ñ»˜üÿÿÿÿ8Äëƒ“ä1
+java:S1450"TRemove the "token" field and declare it as a local variable in the relevant methods.(—ñ»˜üÿÿÿÿ8÷«­÷ô1
 n
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 41 to the 15 allowed.(ŒÂ×\8Æëƒ“ä1
-M	java:S106’"+Replace this use of System.out by a logger.(»üãìøÿÿÿÿ8Ëëƒ“ä1
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 42 to the 15 allowed.(ŒÂ×\8ù«­÷ô1
+M	java:S106’"+Replace this use of System.out by a logger.(»üãìøÿÿÿÿ8‚¬­÷ô1
 I
-java:S1168š"+Return an empty collection instead of null.(¥¹ï8Ìëƒ“ä1
+java:S1168š"+Return an empty collection instead of null.(¥¹ï8ƒ¬­÷ô1
